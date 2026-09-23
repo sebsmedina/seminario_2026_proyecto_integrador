@@ -1,33 +1,28 @@
- # 🧠 [Materia SEMINARIO DE ACTUALIZACIÓN 2026 - Construcción de Proyecto Integrador] 
+ ## 🧠 [Materia SEMINARIO DE ACTUALIZACIÓN 2026 - Construcción de Proyecto Integrador] 
 
-📋 Índice
+### 📋 Índice (en construcción...)
 
-- Descripción del Proyecto
-- Estructura del Repositorio
-- Estado de Desarrollo
-- Requisitos Previos
-- Clases / Etapas del Proyecto
-- Instalación y Uso Local
-- Despliegue
-- Tecnologías Utilizadas
-- Contribuciones
-- Licencia
-
-## 📝 Descripción del Proyecto
+#### 📝 Descripción del Proyecto
 
 Este repositorio reúne el desarrollo clase a clase de una aplicación propia basada en un modelo de Machine Learning, desde la preparación de datos hasta su puesta en línea como servicio accesible públicamente. Cada carpeta corresponde a una sesión concreta, con código, explicaciones y resultados.
 
 🎯 Objetivo final: Contar con una aplicación web completamente funcional que reciba entradas del usuario, ejecute el modelo entrenado y devuelva predicciones en tiempo real.
 
-✅ Requisitos Previos
+#### ✅ Requisitos Previos
 
-* Python 3.9 o superior
-* Gestor de paquetes: pip o conda
-* Cuenta en plataforma de despliegue (ej: Render, Heroku, AWS, Hugging Face)
+* Python 3.13 o superior
+* Gestor de paquetes (preferentemente *pip*)
+* Cuenta en plataforma de despliegue (Hugging Face, Render, Streamlit)
 * Git instalado y configurado
 
-Instalar dependencias generales:
+#### 💻 Instalación y Uso Local
 
 ```bash
-pip install -r requisitos.txt
+# Clonar repositorio
+git clone https://github.com/sebsmedina/seminario_2026_proyecto_integrado
+cd seminario_2026_proyecto_integrado
+
+# Instalar dependencias
+pip install -r requirements.txt
 ```
+

@@ -2,7 +2,7 @@
 
 Actividades que llevamos a cabo en la clase:
 
-1. Creamos un archivo *app.py* en el se alojará todo el front-end de nuestra aplicación en Gradio.
+1. Creamos un archivo *app.py* en el cual se alojará todo el Back-end de nuestra aplicación utilizando Gradio, una librería de Python que permite crear interfaces web interactivas para modelos de aprendizaje automático y funciones de inteligencia artificial con pocas líneas de código. La misma gestionará la API y la interfaz de nuestra aplicación.
 
 2. Creamos el entorno virtual de nuestro proyecto con el siguiente comando:
 

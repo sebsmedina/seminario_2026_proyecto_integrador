@@ -1,6 +1,6 @@
-## Clase N° 3 - Preparación del entorno de desarrollo
+## Clase N° 3 - GitHub, Codespaces y control de versiones
 
-Actividades que llevamos a cabo en la clase: GitHub, Codespaces y control de versiones
+Actividades que llevamos a cabo en la clase: 
 
 1. Iniciamos con un repaso rápido sobre los comandos que aprendimos en la clase 2 con respecto a la creación de un
 entorno de desarollo y configurarlo para utilizar Git en él:

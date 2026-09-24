@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  ## 🧠 [Materia SEMINARIO DE ACTUALIZACIÓN 2026 - Construcción de Proyecto Integrador] 
 
 ### 📋 Índice (en construcción...)
@@ -26,3 +27,17 @@ cd seminario_2026_proyecto_integrado
 pip install -r requirements.txt
 ```
 
+=======
+---
+title: Seminario 2026 Proyecto Integrador
+emoji: 🔥
+colorFrom: gray
+colorTo: gray
+sdk: static
+pinned: false
+license: mit
+short_description: Space Proyecto Integrador Seminario Actualizacion 206
+---
+
+Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+>>>>>>> b32884ce42f5352cce072558c631df8906eb3411

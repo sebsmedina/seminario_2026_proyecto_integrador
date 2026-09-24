@@ -1,9 +1,9 @@
 ---
 title: Proyecto Integrador Seminario 2026
-emoji: 📊
-colorFrom: pink
-colorTo: indigo
-sdk: static
+emoji: 🚀
+colorFrom: green
+colorTo: blue
+sdk: gradio
 pinned: false
 short_description: Proyecto Integrador Seminario Actualizacion 2026
 ---

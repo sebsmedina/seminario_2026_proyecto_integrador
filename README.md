@@ -3,7 +3,7 @@ title: Seminario 2026 Proyecto Integrador
 emoji: 🚀
 colorFrom: blue
 colorTo: green
-sdk: static
+sdk: gradio
 pinned: false
 short_description: Proyecto Integrador Seminario Actualizacion 2026
 ---

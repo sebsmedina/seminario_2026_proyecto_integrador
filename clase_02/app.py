@@ -6,7 +6,7 @@ import spaces
 
 # Definimos la función principal:
 def greet(name, intensity):
-    return "Hello, " + name + "!" * int(intensity)
+    return "Hola, " + name + "!" * int(intensity)
 
 # Estructura general del programa:
 demo = gr.Interface(

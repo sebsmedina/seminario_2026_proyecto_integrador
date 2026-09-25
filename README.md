@@ -1,7 +1,7 @@
 ---
 title: Seminario 2026 Proyecto Integrador
 emoji: 🚀
-colorFrom: purple
+colorFrom: blue
 colorTo: green
 sdk: static
 pinned: false

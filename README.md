@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 ## 🧠 [Materia SEMINARIO DE ACTUALIZACIÓN 2026 - Construcción de Proyecto Integrador] 
 
 ### 📋 Índice (en construcción...)
@@ -21,22 +19,9 @@ Este repositorio reúne el desarrollo clase a clase de una aplicación propia ba
 
 ```bash
 # Clonar repositorio
-git clone https://github.com/sebsmedina/seminario_2026_proyecto_integrado
+git clone https://github.com/sebsmedina/seminario_2026_proyecto_integrador
 cd seminario_2026_proyecto_integrado
 
 # Instalar dependencias
 pip install -r requirements.txt
 ```
-=======
----
-title: Mi App
-emoji: 🚀
-colorFrom: blue
-colorTo: green
-sdk: gradio
-sdk_version: ...
-app_file: app.py
-pinned: false
----
->>>>>>>
-

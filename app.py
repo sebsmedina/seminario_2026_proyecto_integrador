@@ -1,5 +1,6 @@
 import gradio as gr
 import spaces
+import os
 from datetime import datetime, date
 
 @spaces.GPU
@@ -41,4 +42,4 @@ with gr.Blocks() as demo:
     )
 
 if __name__ == "__main__":
-    demo.launch(share=True)
+    demo.launch()

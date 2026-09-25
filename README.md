@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## 🧠 [Materia SEMINARIO DE ACTUALIZACIÓN 2026 - Construcción de Proyecto Integrador] 
 
 ### 📋 Índice (en construcción...)
@@ -25,3 +26,13 @@ cd seminario_2026_proyecto_integrado
 # Instalar dependencias
 pip install -r requirements.txt
 ```
+=======
+---
+title: Seminario_2026_Proyecto_Integrador
+sdk: gradio
+emoji: 🚀
+colorFrom: blue
+colorTo: green
+short_description: Proyecto Integrador Seminario Actualizacion 2026
+---
+>>>>>>> 72b48d0d4905527413d1afcecad8015cb6fff199

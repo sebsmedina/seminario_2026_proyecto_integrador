@@ -20,7 +20,7 @@ Este repositorio reúne el desarrollo clase a clase de una aplicación propia ba
 ```bash
 # Clonar repositorio
 git clone https://github.com/sebsmedina/seminario_2026_proyecto_integrador
-cd seminario_2026_proyecto_integrado
+cd seminario_2026_proyecto_integrador
 
 # Instalar dependencias
 pip install -r requirements.txt

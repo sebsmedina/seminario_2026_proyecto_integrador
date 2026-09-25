@@ -29,7 +29,7 @@ pip install -r requirements.txt
 =======
 ---
 title: Seminario_2026_Proyecto_Integrador
-sdk: gradio
+sdk: static
 sdk_version: ...
 python_version: 3.13
 emoji: 🚀

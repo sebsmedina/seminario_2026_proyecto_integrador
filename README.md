@@ -4,7 +4,7 @@ emoji: 🚀
 colorFrom: green
 colorTo: blue
 sdk: gradio
-app_file: app.py
+app_file: /clase_02/app.py
 pinned: false
 license: mit
 short_description: "Proyecto Integrador Seminario Actualizacion 2026"

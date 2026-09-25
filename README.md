@@ -3,7 +3,7 @@ title: Seminario 2026 Proyecto Integrador
 emoji: 🚀
 colorFrom: green
 colorTo: blue
-sdk: static
+sdk: gradio
 app_file: app.py
 pinned: false
 license: mit

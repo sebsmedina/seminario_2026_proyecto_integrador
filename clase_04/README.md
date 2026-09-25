@@ -77,3 +77,7 @@ git add README.md
 git commit -m "Repongo la configuración del Space"
 git push space main
 ```
+
+Vemos que la aplicación se deplega de forma correcta, siendo Gradio quien construye el Frontend, construye la API y la documenta.
+
+9. Para finalizar, modificamos la interfaz de nuestra app utilizando el método Blocks de Gradio, agregándole funcionalidad.

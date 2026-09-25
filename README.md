@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
+
 ## 🧠 [Materia SEMINARIO DE ACTUALIZACIÓN 2026 - Construcción de Proyecto Integrador] 
 
 ### 📋 Índice (en construcción...)
@@ -29,25 +29,14 @@ pip install -r requirements.txt
 ```
 =======
 ---
-title: Proyecto Integrador Seminario 2026
-emoji: 🚀
-colorFrom: green
-colorTo: blue
-=======
----
-title: Proyecto Integrador Seminario 2026
+title: Mi App
 emoji: 🚀
 colorFrom: blue
 colorTo: green
->>>>>>> fc24af136e32e6b998d3bce7031cdc8b5f7e47a4
 sdk: gradio
+sdk_version: ...
+app_file: app.py
 pinned: false
-short_description: Proyecto Integrador Seminario Actualizacion 2026
 ---
+>>>>>>>
 
-<<<<<<< HEAD
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
->>>>>>> 60dff5890abac0dfd91b71de8863c07228988265
-=======
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
->>>>>>> fc24af136e32e6b998d3bce7031cdc8b5f7e47a4

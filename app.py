@@ -1,9 +1,12 @@
 import gradio as gr
-import spaces
+# import spaces
 import os
 from datetime import datetime, date
 
-@spaces.GPU
+# Se comenta la siguiente línea ya que solamente es válida para cuando se realiza
+# el deploy mediante Spaces de Hugging Face
+# @spaces.GPU
+
 def saludar_y_calcular_edad(nombre, fecha_nacimiento_str):
     if not nombre or not fecha_nacimiento_str:
         return "Por favor, completa todos los campos."

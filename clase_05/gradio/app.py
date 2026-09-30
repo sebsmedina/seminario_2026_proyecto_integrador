@@ -7,12 +7,13 @@ from datetime import datetime, date
 # el deploy mediante Spaces de Hugging Face
 # @spaces.GPU
 
+# Función principal
 def saludar_y_calcular_edad(nombre, fecha_nacimiento_str):
     if not nombre or not fecha_nacimiento_str:
         return "Por favor, completa todos los campos."
 
     try:
-        # Convertir el texto a un objeto fecha (Formato: AAAA-MM-DD)
+        # Convertir de texto a fecha (Formato: AAAA-MM-DD)
         fecha_nac = datetime.strptime(fecha_nacimiento_str, "%Y-%m-%d").date()
         hoy = date.today()
         
@@ -27,7 +28,7 @@ def saludar_y_calcular_edad(nombre, fecha_nacimiento_str):
     except ValueError:
         return "Por favor, ingresa la fecha en formato AAAA-MM-DD (ejemplo: 1995-08-25)."
 
-
+# Estructura con Blocks
 with gr.Blocks() as demo:
     nombre = gr.Textbox(label="Tu nombre", placeholder="Ej. Ana")
     fecha_nacimiento = gr.Textbox(
@@ -44,6 +45,7 @@ with gr.Blocks() as demo:
         outputs=salida
     )
 
+# Main
 if __name__ == "__main__":
     demo.launch(server_name="0.0.0.0",
                 server_port=int(os.environ.get("PORT", 10000))

@@ -34,3 +34,7 @@ Actualizamos nuestro repositorio luego de los cambios con *add*, *commit* y *pus
 python app.py
 ```
 En *Compute* pinchamos en la opción *Free* y luego en el botón *Deploy Web Service* y listo! Nuestra app está en proceso de ser desplegada.
+
+7. App en Streamlit. Al igual que en Render, creamos una cuenta en Streamlit al conectarla con nuestro repositorio en GitHub.
+
+8. Una vez creada nuestra cuenta, sobre el apartado Streamlit Playground seleccionamos crear una nueva app desde un repositorio en GitHub. Al solicitarnos la dirección del repositorio, colocaremos la que contiene nuestro proyecto integrador. Streamlit por si solo encontrará la ruta que contiene la aplicación. Solamente nos quedará apretar el botón *Deploy* para deplegar nuestra app.

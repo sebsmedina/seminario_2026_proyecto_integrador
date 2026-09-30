@@ -2,6 +2,7 @@
 import gradio as gr
 import spaces
 
+# Decorador para Spaces
 @spaces.GPU
 
 # Definimos la función principal:
@@ -16,5 +17,6 @@ demo = gr.Interface(
     api_name="predict"
 )
 
+# Main:
 if __name__ == "__main__":
     demo.launch()

@@ -1,6 +1,27 @@
 ## Clase N° 5 - Del link que se cae al deploy propio
 
-Actividades que llevamos a cabo en la clase:
+### Links:
+- Gradio en Render: https://seminario-2026-proyecto-integrador-2.onrender.com
+- Streamlit en Render: https://seminario-2026-proyecto-integrador-1.onrender.com/
+
+### ¿Qué hacen mis aplicaciones?
+Simplemente a partir del ingreso por parte del usuario de la fecha de nacimiento, ambas calculan la edad del mismo.
+
+### ¿Cómo se publicaron ambas?
+Para desplegar ambas publicaciones se utilizó Render, un web service gratuito.
+
+- Gradio App
+Root Directory: clase_05/gradio/
+Build Command: clase_05/gradio/ pip install -r requirements.txt
+Start Command: clase_05/gradio/ python app.py
+
+- Streamlit App
+Root Directory: clase_05/streamlit/
+Build Command: clase_05/streamlit/ pip install -r requirements.txt
+Start Command: clase_05/streamlit/ streamlit app.py
+
+
+### Actividades que llevamos a cabo en la clase:
 
 1. Para comenzar vimos como funciona realmente Gradio de forma local (ante la imposibilidad de correrlo en Hugging Faces) y porque al cerrar nuestra PC dejaba de funcionar la app.
 
@@ -14,7 +35,6 @@ Actividades que llevamos a cabo en la clase:
 
 ```bash
 import spaces
-
 @spaces.GPU
 ```
 
@@ -38,3 +58,12 @@ En *Compute* pinchamos en la opción *Free* y luego en el botón *Deploy Web Ser
 7. App en Streamlit. Al igual que en Render, creamos una cuenta en Streamlit al conectarla con nuestro repositorio en GitHub.
 
 8. Una vez creada nuestra cuenta, sobre el apartado Streamlit Playground seleccionamos crear una nueva app desde un repositorio en GitHub. Al solicitarnos la dirección del repositorio, colocaremos la que contiene nuestro proyecto integrador. Streamlit por si solo encontrará la ruta que contiene la aplicación. Solamente nos quedará apretar el botón *Deploy* para deplegar nuestra app.
+
+### Conclusiones - Diferencias entre ambas
+
+Gradio se codifica menos y es mas directo con su método *.Blocks()*, pero más rigido, mientras que en Streamlit es más personalizable, pero con mayor curva de aprendizaje. Por otro lado, Gradio te ayuda a compartir rápido con una URL pública (con el método demo.launch(share=True)), mientras que en Streamlit hay que subir el código a un repositorio y conectar con el hosting.
+
+En resumen, por su características Gradio está orientado a los modelos de ML e IA, mientras que Streamlit lo es para dashboards y aplicaciones de datos.
+
+
+

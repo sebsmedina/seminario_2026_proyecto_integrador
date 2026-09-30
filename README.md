@@ -41,27 +41,29 @@ python app.py
 
 ## Estructura de la cursada:
 
+```text
 ├── Clase_02/
-│ ├── app.py
-│ └── README.md
-├── Clase_03/
-│ └── README.md
-├── Clase_04/
-│ ├── app.py
-│ └── README.md
-├── Clase_05/
-│   ├── gradio/
-│   │   ├── app.py
-│   │   └── README.md  
-│   └── streamlit/
 │       ├── app.py
 │       └── README.md
+├── Clase_03/
+│       └── README.md
+├── Clase_04/
+│       ├── app.py
+│       └── README.md
+├── Clase_05/
+│       ├── gradio/
+│       │       ├── app.py
+│       │       └── README.md  
+│       └── streamlit/
+│               ├── app.py
+│               └── README.md
 ├── .gitattributes
 ├── .gitignore
 ├── index.html
 ├── README.md
 ├── requirements.txt
 └── style.css
+```
 
 👥 Autores
 - Angel Sebastián Medina, alumno del IFTS N° 18

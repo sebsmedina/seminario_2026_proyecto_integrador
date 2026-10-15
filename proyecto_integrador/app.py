@@ -40,10 +40,12 @@ def traducir(par: str, texto: str) -> str:
     return traducir_texto(traductor, texto.strip())
 
 # Interfaz de usuario con Gradio:
-
-
 with gr.Blocks(title="Traductor EN/ES", theme=gr.themes.Soft()) as demo:
     gr.Markdown("#  Traductor Inglés <-> Español")
+
+    gr.Markdown(
+        "Elige el par de idiomas, escribí y presioná Traducir."
+    )
 
     par_idioma = gr.Dropdown(
         choices=list(MODELOS.keys()),
@@ -58,8 +60,14 @@ with gr.Blocks(title="Traductor EN/ES", theme=gr.themes.Soft()) as demo:
             )
             with gr.Row():
                 btn_traducir = gr.Button("Traducir", variant="primary")
+                btn_limpiar = gr.Button("Limpiar")
+
         with gr.Column():
-            texto_salida = gr.Textbox(lines=6, label="Traducción", interactive=False)
+            texto_salida = gr.Textbox(lines=6,
+                                    label="Traducción",
+                                    interactive=False,
+                                    placeholder="La traducción aparecerá acá...",
+                                    buttons=["copy"])
 
     btn_traducir.click(
         fn=traducir,
@@ -67,13 +75,16 @@ with gr.Blocks(title="Traductor EN/ES", theme=gr.themes.Soft()) as demo:
         outputs=texto_salida,
     )
 
+    btn_limpiar.click(lambda: ("", ""),
+                    outputs=[texto_entrada,
+                            texto_salida])
+
     # Enter en el cuadro de texto también dispara la traducción
     texto_entrada.submit(
         fn=traducir,
         inputs=[par_idioma, texto_entrada],
         outputs=texto_salida,
     )
-
 
 # Launch de la aplicación:
 if __name__ == "__main__":

@@ -1,7 +1,7 @@
 import streamlit as st
 from datetime import date
 
-
+# Función principal
 def calcular_edad(fecha_nac: date) -> int:
     """Calcula la edad exacta considerando mes y día."""
     hoy = date.today()
@@ -13,13 +13,14 @@ def calcular_edad(fecha_nac: date) -> int:
 
 # Configuración de la página 
 st.set_page_config(
-    page_title="Saludo y calculadora de Edad",
+    page_title="Calculadora de Edad",
     page_icon="🎂",
     layout="centered",
 )
 
+# Título de app
 st.title("🎂 Calculadora de edad")
-st.markdown("Ingresa tu nombre y tu fecha de nacimiento para saber cuántos años tienes.")
+st.markdown("Ingresa tu fecha de nacimiento para saber cuántos años tienes:")
 
 # Formulario de entrada
 with st.form("formulario_edad"):
@@ -40,7 +41,7 @@ with st.form("formulario_edad"):
 
     enviar = st.form_submit_button("Calcular edad", type="primary")
 
-# ---------- Lógica de salida ----------
+# Respuesta de la app
 if enviar:
     if not nombre.strip():
         st.warning("Por favor, ingresa tu nombre.")
@@ -57,9 +58,4 @@ if enviar:
             f"{'año' if edad == 1 else 'años'}."
         )
 
-        # Detalle extra: días vividos
-        dias_vividos = (date.today() - fecha_nacimiento).days
-        # st.caption(f"📅 Has vivido aproximadamente {dias_vividos:,} días.")
-
 st.divider()
-# st.caption("Aplicación creada con Streamlit · Lista para desplegar en Render")

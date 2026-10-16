@@ -1,6 +1,5 @@
 # ===============================================================
 #   Traductor Inglés <-> Español con Hugging Face Transformers
-#   Prototipo de aplicación interactiva para traducir frases.
 # ===============================================================
 
 # Importar librerías necesarias:
@@ -15,17 +14,14 @@ MODELOS = {
 }
 
 # Función para crear el pipeline de traducción:
+# Crea y devuelve un pipeline de traducción para el par de idiomas elegido.
 def crear_traductor(par: str):
-    """Crea y devuelve un pipeline de traducción para el par de idiomas elegido."""
     if par not in MODELOS:
         raise ValueError(
-            f"Par '{par}' no soportado. Opciones: {', '.join(MODELOS)}"
-        )
-    
+            f"Par '{par}' no soportado. Opciones: {', '.join(MODELOS)}")
     return pipeline(
         task="translation",
-        model=MODELOS[par],
-    )
+        model=MODELOS[par])
 
 # Función para traducir un texto:
 def traducir_texto(traductor, texto: str, max_length: int = 200) -> str:
@@ -49,23 +45,21 @@ respuestas_predeterminadas = [
     ["Le agradecemos por sus estrellas. Nos alegra saber que tuvo una buena experiencia con nuestro servicio."]
 ]
 
+# Encabezado y descripción de la aplicación:
 with gr.Blocks(title="Traductor EN/ES", theme=gr.themes.Soft()) as demo:
-    # Encabezado y descripción de la aplicación:
     gr.Markdown("#  Traductor Inglés <-> Español")
     gr.Markdown("Elige el par de idiomas, escribe o pega tu frase y presiona Traducir.")
 
-    par_idioma = gr.Dropdown(
-        choices=list(MODELOS.keys()),
-        value="Inglés -> Español (en-es)",
-        label="Par de idiomas",
-    )
+    par_idioma = gr.Dropdown(choices=list(MODELOS.keys()),
+                             value="Inglés -> Español (en-es)",
+                             label="Par de idiomas")
 
+# Diseño de la interfaz con filas y columnas:
     with gr.Row():
         with gr.Column():
             texto_entrada = gr.Textbox(lines=6,
                                        label="Texto original",
-                                       placeholder="Escribe o pega aquí el texto a traducir..."
-            )
+                                       placeholder="Escribe o pega aquí el texto a traducir...")
             with gr.Row():
                 btn_traducir = gr.Button("Traducir", variant="primary")
                 btn_limpiar = gr.Button("Limpiar")
@@ -78,16 +72,19 @@ with gr.Blocks(title="Traductor EN/ES", theme=gr.themes.Soft()) as demo:
                                       buttons=["copy"])
 
     # Acciones de los botones:
+    # Botón Traducir:
     btn_traducir.click(
         fn=traducir,
         inputs=[par_idioma, texto_entrada],
         outputs=texto_salida,
     )
+    # Botón Limpiar:
     btn_limpiar.click(lambda: ("", ""),
                     outputs=[texto_entrada,
                             texto_salida])
 
-    # Enter en el cuadro de texto también dispara la traducción
+    # Código para que al preionar Enter en el cuadro de 
+    # texto también dispare la traducción:
     texto_entrada.submit(
         fn=traducir,
         inputs=[par_idioma, texto_entrada],

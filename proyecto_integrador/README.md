@@ -1,6 +1,6 @@
 # Traductor EN/ES (Transformers + Gradio)
 
-App de traducción con HuggingFace `pipeline` e interfaz web Gradio.
+App de traducción con HuggingFace `pipeline` e interfaz web Gradio, correspondiente al Trabajo Práctico Integrador de la materia **Seminario de Actualización** de la Tecnicatura en Ciencia de Datos e IA del IFTS N° 18. La construcción del mismo será mostrada en clase mediante una presentación, junto a un informe realizado en PDF y el notebook de Jupyter donde se detallan las decisiones llevadas a cabo por el alumno.
 
 ## Ejecutar local
 

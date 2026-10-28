@@ -10,9 +10,10 @@ a. *pipeline* de la librería *transformers* de Hugging Face:
 
 ```bash
 from transformers import pipeline
+
 pipe = pipeline(
-"text-classification",
-model="cardiffnlp/twitter-xlm-roberta-base-sentiment",
+    "text-classification",
+    model="cardiffnlp/twitter-xlm-roberta-base-sentiment",
 )
 pipe("Esta clase está buenísima")
 ```
@@ -35,6 +36,25 @@ Y lo que devuelve:
 [{'label': 'Positive', 'score': 0.9...}]
 ```
 
+b. Uso de *InferenceClient()*. Configuración del token de Hugging Face:
+
+```bash
+import os
+from huggingface_hub import InferenceClient
+
+client = InferenceClient(provider="hf-inference",
+                         api_key=os.environ["HF_TOKEN"]
+)
+resultado = client.text_classification(
+    "esta clase me está costando pero se entiende",
+    model="cardiffnlp/twitter-xlm-roberta-base-sentiment",
+    top_k=3,
+)
+
+for r in resultado:
+    print(r.label, r.score)
+```
+
 3. Planteamos la diferencia entre entrenamiento e inferencia de un modelo de IA.
 
 4. Diferencias entre *pipeline* e *InferenceClient()*:
@@ -51,25 +71,7 @@ Y lo que devuelve:
 
 Exploramos la model card del siguiente modelo: huggingface.co/cardiffnlp/twitter-xlm-roberta-base-sentiment
 
-6. Uso de *InferenceClient()*. Configuración del token de Hugging Face
-
-```bash
-import os
-from huggingface_hub import InferenceClient
-client = InferenceClient(
-provider="hf-inference",
-api_key=os.environ["HF_TOKEN"],
-)
-resultado = client.text_classification(
-"esta clase me está costando pero se entiende",
-model="cardiffnlp/twitter-xlm-roberta-base-sentiment",
-top_k=3,
-)
-for r in resultado:
-print(r.label, r.score)
-```
-
-Tipos de error:
+6. Tipos de error:
 a. **401 Unauthorized**: Token mal copiado. Lo responde Hugging Face: el pedido sí llegó.
 
 b. **KeyError: 'HF_TOKEN'**: La variable no está definida. Lo da nuestro dispositivo, antes de mandar algo.

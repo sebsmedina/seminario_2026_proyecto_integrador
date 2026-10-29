@@ -1,31 +1,21 @@
----
-title: Seminario 2026 Proyecto Integrador
-emoji: 🚀
-colorFrom: green
-colorTo: blue
-sdk: gradio
-app_file: clase_02/app.py
-pinned: false
-license: mit
-short_description: "Proyecto Integrador Seminario Actualizacion 2026"
----
+## 🧠 Seminario de Actualización 2026 - Construcción de Proyecto Integrador
 
-# 🧠 Seminario de Actualización 2026 - Construcción de Proyecto Integrador
-
-## 📋 Descripción del Proyecto
+### 📋 Descripción del Proyecto
 
 Este repositorio reúne la cursada de la materia "Seminario de Actualización" en el 2do cuatrimestre del año 2026, donde se explora el desarrollo de una aplicación basada en un modelo de Machine Learning, desde la preparación de datos hasta su puesta en línea como servicio accesible públicamente.
 
-🎯 **Objetivo final:** contar con una aplicación web funcional que reciba entradas del usuario, ejecute el modelo entrenado y devuelva predicciones en tiempo real.
+### 🎯 Objetivo final
 
-🛠️ Requisitos Previos y Tecnologías Utilizadas
+Contar con una aplicación web funcional que reciba entradas del usuario, ejecute el modelo entrenado y devuelva predicciones en tiempo real.
+
+### 🛠️ Requisitos Previos y Tecnologías Utilizadas
 - Lenguaje: Python 3.13
-- Bibliotecas: pandas, numpy, scikit-learn, matplotlib, seaborn
+- Bibliotecas: gradio, streamlit, spaces, pandas, numpy, scikit-learn, matplotlib, seaborn
 - Frameworks de despliegue: Gradio / Streamlit
 - Plataforma de despliegue: HuggingFace / Render
 - Control de versiones: Git + GitHub
 
-## 💻 Instalación y Uso Local
+### 💻 Instalación y Uso Local
 
 ```bash
 # Clonar repositorio
@@ -39,7 +29,7 @@ pip install -r requirements.txt
 python app.py
 ```
 
-## Estructura de la cursada:
+### 📁 Estructura de la cursada:
 
 ```text
 ├── Clase_02/

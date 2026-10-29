@@ -1,14 +1,37 @@
 ## Clase N° 2 - Preparación del entorno de desarrollo
 
-Actividades que llevamos a cabo en la clase:
+#### 🎯 Objetivos:
+Carpeta del Proyecto Integrador. Entorno virtual creado y activado. *requirements.txt* generado. Git configurado. Repositorio local con nuestro primer commit.
 
-1. Creamos un archivo *app.py* en el cual se alojará todo el Back-end de nuestra aplicación utilizando Gradio, una librería de Python que permite crear interfaces web interactivas para modelos de aprendizaje automático y funciones de inteligencia artificial con pocas líneas de código. La misma gestionará la API y la interfaz de nuestra aplicación.
+#### 📂 Contenido de esta Carpeta
+| Nombre del archivo | Descripción |
+|---|---|
+| `app.py` | Contiene el código de una pequeña app en Gradio|
+| `README.md` | Pasos para editar nuestro archivo `app.py` |
+| `requirements.txt` | Archivo de texto con las librerías necesarias para nuestro entorno virtual |
 
-2. Creamos el entorno virtual de nuestro proyecto con el siguiente comando:
+#### ⚙️ Requisitos Previos
+Antes de ejecutar el código, asegúrate de tener instalado:
+- Visual Studio Code (o cualquier editor de código de tu preferencia)
+- Python 3.8 o superior
+
+#### 💻 Instalación y Uso Local
+
+```bash
+# Clonar repositorio
+git clone https://github.com/sebsmedina/seminario_2026_proyecto_integrador/clase_02
+cd clase_02
+```
+
+#### 📋 Desarrollo
+
+1. Dentro de la carpeta de nuestro proyecto, crear una carpeta de nombre `clase_02`. Dentro de ella y, mediante nuestro editor de código (Visual Studio code), creamos un archivo *app.py*, el cual se alojará todo el Back-end de nuestra aplicación.
+
+2. Creamos el entorno virtual de nuestro proyecto ingresando por la terminal el siguiente comando:
 
 ```bash
 # crear y activar (Windows)
-> py -m venv .venv
+> python -m venv .venv
 > .venv\Scripts\activate
 
 # macOS / Linux
@@ -23,14 +46,29 @@ python -c "import sys;
 print(sys.executable)"
 ```
 
-3. Instalamos todas las librerías necesarias con *pip* y las almacenamos en un archivo *requimerents.txt* para que puedan ser replicadas en el futuro.
+**CONSEJO**: siempre crear un entorno virtual para cada proyecto. Asegura aislamiento, organización y reproducibilidad.
+
+3. Utilizaremos Gradio, una librería de Python que permite crear interfaces web interactivas para modelos de aprendizaje automático y funciones de inteligencia artificial, para gestionar la API y la interfaz de nuestra aplicación.
+
+Instalaremos todas las librerías necesarias con *pip* utilizando *requierements.txt*
 
 ```bash
-(.venv) > pip install requests               # instalamos dependencias
+(.venv) > pip install -r requirements.txt
+```
+Instalará entre otras librerías:
 
-(.venv) > pip freeze > requirements.txt      # guardamos la lista
+```bash
+gradio        # Framework para desplegar apps basadas en modelos de ML
+spaces        # paquete de utilidades de Hugging Face para desplegar trabajos en HF Spaces
+streamlit     # otro framework de código abierto
+requests      # instalamos dependencias para consumir API's
+```
 
-(.venv) > pip install -r requirements.txt    # para quien necesite replicarla
+4. Almacenamos en un archivo *requimerents.txt* las librerías instaladas para que puedan ser replicadas en el futuro.
+
+```bash
+(.venv) > pip freeze > requirements.txt     # guardamos la lista
+                                            # para quien necesite replicarla
 ```
 
 4. Uso de Git para organizar las distintas versiones de nuestro proyecto.
@@ -48,26 +86,22 @@ Identificarnos con Git al iniciarlo (necesario para ejecutar nuestros commits). 
 5. Creación de *.gitignore* para evitar que Git mueva archivos y/o carpetas que no queramos.
 Por ejemplo:
 ```bash
-.venv/
-__pycache__/
+.venv/          # carpeta de nuestro entorno virtual
+__pycache__/    # contiene código fuente de Python escrito en bajo nivel
 ```
 
-Visualizamos que tenemos en nuestro repositorio local:
+6. Para visualizar que tenemos en nuestro repositorio local:
 
 ```bash
 > git init              # Iniciamos un nuevo repositorio
 > git status -u         # Lo que Git ve en la carpeta de nuestro proyecto
 ```
 
-6. Añadimos nuestros archivos con las últimas modificaciones al área de preparación (*add*) y las guardamos en el historial de nuestro repositorio local (*commit*).
+7. Añadimos nuestros archivos con las últimas modificaciones al área de preparación (*add*) y las guardamos en el historial de nuestro repositorio local (*commit*).
 
 ```bash
 > git add .                         # Agregamos todos los
-                                    # archivos al área de preparación
+                                    # archivos al área de preparación (en nuestro solamente app.py)
 > git commit -m "mi_primer_commit"  # Guardamos la actualización
                                     # junto con un mensaje descriptivo
 ```
-
-
-
-

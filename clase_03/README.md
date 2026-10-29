@@ -1,44 +1,47 @@
 ## Clase N° 3 - GitHub, Codespaces y control de versiones
 
-Actividades que llevamos a cabo en la clase: 
+#### 🎯 Objetivos:
+Conectar nuestro repositorio local con GitHub. Importancia del README.
 
-1. Iniciamos con un repaso rápido sobre los comandos que aprendimos en la clase 2 con respecto a la creación de un
-entorno de desarollo y configurarlo para utilizar Git en él:
+#### 📂 Contenido de esta Carpeta
+| Nombre del archivo | Descripción |
+|---|---|
+| `README.md` | Pasos para conectar nuestro repositorio local con el remoto |
 
-```bash
-python --version
-python -m venv .venv
+#### ⚙️ Requisitos Previos
+- Tener inicializado Git en nuestro repositorio local y habernos autenticado por única vez.
 
-.venv\Scripts\activate      # Windows
-source .venv/bin/activate   # Mac/Linux
+#### 📋 Desarrollo
 
-pip install -r requirements.txt
-git add .
-git commit -m "mensaje"
-```
-2. Generamos una cuenta en GitHub y creamos nuestro primero repositorio. Obtuvimos su URL para utilizarlo en el futuro.
+1. Generar una cuenta en GitHub.
 
-ATENCIÓN! Si ya generaste un archivo README.md en tu repositorio local, al crear un repositorio remoto, no tildar la opción *generar un archivo README.md*
+2. Crear nuestro primer repositorio con el botón **New** y le damos nombre y caracter de público o privado. 
 
+**ATENCIÓN!** Si ya generaste un archivo README.md en tu repositorio local, al crear un repositorio remoto, no tildar la opción *generar un archivo README.md*
 
-3. Aprendimos el concepto de un Codespace: un entorno de desarrollo brindado por GitHub que corre en Linux. Ideal para cuando no disponemos de nuestra máquina o no queremos instalar programas en ella. Gratuito, pero de uso limitado. Vemos que cuando lo inicializamos, se conecta automaticamente a nuestro repositorio en GitHub:
+**NOTA**: crear un archivo README.md es opcional tecnicamente, pero es lo primero que se ve cuando entramos en cualquier repositorio.
 
+3. Una vez creado el repositorio, con el botón **Code** -> HTTPS copiamos la URL para utilizarlo en el futuro.
+
+4. Se genera un Codespace: un entorno de desarrollo brindado por GitHub que corre en Linux. Ideal para cuando no disponemos de nuestra máquina o no queremos instalar programas en ella. Gratuito, pero de uso limitado. Se conecta automaticamente a nuestro repositorio en GitHub al inicializarlo:
+
+**Terminal CODESPACE**
 ```bash
 $ git remote -v
 origin  https://github.com/usuario/repo.git (fetch)
 origin  https://github.com/usuario/repo.git (push)
 ```
 
-4. Utilizamos Copilot, la IA de asistencia brindada tanto por GitHub como por Visual Studio Code.
-
 5. Conectamos nuestro repositorio local (en nuestra máquina) con el repositorio remoto (en nuestra cuenta de GitHub):
 
 ```bash
 git remote -v
-git remote add origin https://github.com/usuario/repo.git
+git remote add origin https://github.com/usuario/repo.git # enlace a nuestro repositorio remoto en GitHub
 git remote -v
 git push -u origin main
 ```
+*git push origin main* envía todos los archivos que guardamos en el **staging area** con *git add* y luego de guardar el punto de control con *git commit*.
+
 Se establece la diferencia entre la rama "*main*" (local) y la rama "*origin*" (remoto).
 
 6. Comandos básicos para manipular ramas en Git:

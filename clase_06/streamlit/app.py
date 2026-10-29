@@ -16,10 +16,10 @@ def analizar_sentimiento(texto):
         return "Por favor, ingresa un texto para analizar el sentimiento."
 
     # Cargar el modelo de análisis de sentimientos en español
-    pipe_emo = pipeline(model="jobanpreet123/sentiment-spanish")
+    analizador = pipeline(model="jobanpreet123/sentiment-spanish")
     
     # Analizar el sentimiento del texto
-    resultado = pipe_emo(texto)
+    resultado = analizador(texto)
     
     # Devolver el resultado como una cadena legible
     return f"Sentimiento: {resultado[0]['label']}, Confianza: {resultado[0]['score']:.2f}"

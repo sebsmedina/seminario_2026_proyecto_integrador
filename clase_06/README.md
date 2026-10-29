@@ -111,3 +111,7 @@ Desplegar de forma local la app en Streamlit
 ```bash
 >>> streamlit run app.py
 ```
+
+3. ¿Qué hacen mis aplicaciones?
+
+Están constituidas por dos pestañas: La primera solicita el ingreso por parte del usuario de la fecha de nacimiento para calcular su edad; la segunda le pide resumir al usuario sobre su último día de cumpleaños para que el modelo responda si es un sentimiento positivo o negativo.

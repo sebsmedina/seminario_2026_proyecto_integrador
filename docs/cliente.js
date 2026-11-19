@@ -10,7 +10,7 @@
 
 // 1) URL de tu API en Render. SIN barra al final.
 //    Ejemplo: "https://prediccion-ventas-api.onrender.com"
-const API_BASE_URL = "https://dashboard.render.com/web/srv-dbv54sbrjlhs73au61f0/deploys/dep-dbv59qr8gjgs73c6lc70";
+const API_BASE_URL = "https://seminario-2026-proyecto-integrador-tp.onrender.com";
 
 // 2) Ruta del endpoint de predicción (la que definiste en rutas/prediccion.py).
 //    Ejemplos comunes: "/predecir", "/prediccion", "/api/prediccion", "/predict".

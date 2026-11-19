@@ -26,7 +26,7 @@ def health():
 # PASO 4 · Configurar CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],   # "*" = cualquier origen puede llamar a la API (cómodo para practicar;
+    allow_origins=["https://sebsmedina.github.io/"],   # "*" = cualquier origen puede llamar a la API (cómodo para practicar;
                            #       al publicar conviene poner solo la dirección de tu frontend)
     allow_methods=["*"],   # se permiten todos los métodos (GET, POST, ...)
     allow_headers=["*"],   # se permiten todos los encabezados (incluye Content-Type)

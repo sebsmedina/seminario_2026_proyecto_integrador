@@ -24,7 +24,7 @@ def predecir_ingresos(inversion_tv, inversion_radio, inversion_prensa):
     presupuesto = [[inversion_tv, inversion_radio, inversion_prensa]]
     # 4.2 · predict devuelve un único valor: la proyección de ingresos. 
     # Lo convertimos a float para que FastAPI lo pueda convertir a JSON.
-    ingresos_predichos = modelo.predict(presupuesto)
+    ingresos_predichos = modelo.predict(presupuesto)[0]
 
     # 4.3 · Devolver el resultado como diccionario: FastAPI lo
     # convertirá en JSON

@@ -10,19 +10,19 @@
 
 // 1) URL de tu API en Render. SIN barra al final.
 //    Ejemplo: "https://prediccion-ventas-api.onrender.com"
-const API_BASE_URL = "https://TU-APP-EN-RENDER.onrender.com";
+const API_BASE_URL = "https://dashboard.render.com/web/srv-dbv54sbrjlhs73au61f0/deploys/dep-dbv59qr8gjgs73c6lc70";
 
 // 2) Ruta del endpoint de predicción (la que definiste en rutas/prediccion.py).
 //    Ejemplos comunes: "/predecir", "/prediccion", "/api/prediccion", "/predict".
-const ENDPOINT_PREDICCION = "/predecir";
+const ENDPOINT_PREDICCION = "/predecir-ingresos";
 
 // 3) Nombres de los campos que espera tu backend en el cuerpo JSON.
 //    Si tu modelo Pydantic usa otros nombres (ej: "television", "periodico"),
 //    cambialos acá. La clave de la izquierda es interna (no tocar).
 const CAMPOS_SOLICITUD = {
-  tv:     "tv",      // nombre de la clave para Inversión en Televisión
-  radio:  "radio",   // nombre de la clave para Inversión en Radio
-  prensa: "prensa"   // nombre de la clave para Inversión en Prensa
+  tv:     "inversion_tv",      // nombre de la clave para Inversión en Televisión
+  radio:  "inversion_radio",   // nombre de la clave para Inversión en Radio
+  prensa: "inversion_prensa"   // nombre de la clave para Inversión en Prensa
 };
 
 // 4) Tiempo máximo de espera (ms). El plan gratuito de Render puede tardar

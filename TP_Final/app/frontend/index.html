@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Predicción de Ingresos por Ventas</title>
+  <meta name="description" content="Aplicación para predecir ingresos por ventas a partir de la inversión en publicidad (Televisión, Radio, Prensa) mediante un modelo de regresión lineal.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%230f766e'/%3E%3Cpath d='M4 17l5-6 4 3 7-9' stroke='white' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <div class="contenedor encabezado-interior">
+      <div class="marca">
+        <svg class="marca-icono" viewBox="0 0 24 24" aria-hidden="true">
+          <rect width="24" height="24" rx="5" fill="#0f766e"/>
+          <path d="M4 17l5-6 4 3 7-9" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div>
+          <h1>Predicción de Ingresos por Ventas</h1>
+          <p class="subtitulo">Modelo de regresión lineal · Inversión en Televisión, Radio y Prensa</p>
+        </div>
+      </div>
+      <div class="estado-servidor" id="estado-servidor" title="Estado del backend en Render">
+        <span class="punto" id="estado-punto"></span>
+        <span id="estado-texto">Comprobando conexión…</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="contenedor grilla">
+
+    <!-- ============ Formulario de predicción ============ -->
+    <section class="tarjeta formulario">
+      <h2>Calcula tus ingresos estimados</h2>
+      <p class="ayuda">
+        Ingresá la inversión de cada canal en las <strong>mismas unidades</strong> con las que entrenaste el modelo.
+        Podés usar el campo numérico o el deslizador.
+      </p>
+
+      <form id="form-prediccion" novalidate>
+
+        <div class="campo">
+          <label for="tv">Inversión en Televisión</label>
+          <div class="fila-input">
+            <input type="number" id="tv" name="tv" min="0" step="any" placeholder="Ej: 150" required>
+            <span class="unidad">u.m.</span>
+          </div>
+          <input type="range" id="tv-rango" min="0" max="300" step="1" value="0" aria-label="Inversión en Televisión">
+        </div>
+
+        <div class="campo">
+          <label for="radio">Inversión en Radio</label>
+          <div class="fila-input">
+            <input type="number" id="radio" name="radio" min="0" step="any" placeholder="Ej: 30" required>
+            <span class="unidad">u.m.</span>
+          </div>
+          <input type="range" id="radio-rango" min="0" max="50" step="0.5" value="0" aria-label="Inversión en Radio">
+        </div>
+
+        <div class="campo">
+          <label for="prensa">Inversión en Prensa</label>
+          <div class="fila-input">
+            <input type="number" id="prensa" name="prensa" min="0" step="any" placeholder="Ej: 40" required>
+            <span class="unidad">u.m.</span>
+          </div>
+          <input type="range" id="prensa-rango" min="0" max="120" step="1" value="0" aria-label="Inversión en Prensa">
+        </div>
+
+        <div class="acciones">
+          <button type="submit" id="btn-predecir" class="btn-primario">
+            <span class="btn-texto">Predecir ingresos</span>
+            <span class="btn-cargando" hidden>
+              <span class="spinner" aria-hidden="true"></span>
+              Consultando al modelo…
+            </span>
+          </button>
+          <button type="button" id="btn-limpiar" class="btn-secundario">Limpiar campos</button>
+        </div>
+
+        <p class="mensaje" id="mensaje" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="resultado" id="resultado" hidden>
+        <span class="resultado-etiqueta">Ingresos por ventas estimados</span>
+        <span class="resultado-valor" id="valor-resultado"></span>
+        <span class="resultado-nota">Predicción generada por el modelo de regresión lineal</span>
+      </div>
+    </section>
+
+    <!-- ============ Historial ============ -->
+    <section class="tarjeta historial">
+      <div class="historial-cabecera">
+        <h2>Historial de predicciones</h2>
+        <button type="button" id="btn-borrar-historial" class="btn-texto-link">Borrar historial</button>
+      </div>
+
+      <div class="historial-vacio" id="historial-vacio">
+        <p>Todavía no hay predicciones. El historial se guarda en este navegador.</p>
+      </div>
+
+      <div class="tabla-contenedor" id="historial-contenedor" hidden>
+        <table id="tabla-historial">
+          <thead>
+            <tr>
+              <th>Fecha</th>
+              <th>TV</th>
+              <th>Radio</th>
+              <th>Prensa</th>
+              <th>Ingresos estim.</th>
+            </tr>
+          </thead>
+          <tbody id="cuerpo-historial"></tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p>
+        Frontend alojado en GitHub Pages · API (FastAPI + joblib) alojada en Render.
+        La primera petición puede tardar unos segundos mientras el servidor gratuito de Render se reactiva.
+      </p>
+    </div>
+  </footer>
+
+  <script src="cliente.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
